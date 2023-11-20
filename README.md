@@ -1,2 +1,2 @@
 # calcasm
-Simple calculator in x86 assembly
+Simple calculator in x86-64 assembly
