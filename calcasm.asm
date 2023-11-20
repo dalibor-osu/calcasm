@@ -27,19 +27,19 @@ _start:
 	call print_message		;
 	sub rsp, 8			; reset stack pointer to free space
 
-	call read_user_int
-	push rax
+	call read_user_int		; read user input as integer
+	push rax			; save it on stack
 
-	push SECOND_NUMBER_PROMPT
-	call print_message
-	sub rsp, 8
+	push SECOND_NUMBER_PROMPT	; print_message(SECOND_NUMBER_PROMPT)
+	call print_message		; 
+	sub rsp, 8			; reset stack pointer to free space
 
-	call read_user_int
-	push rax
+	call read_user_int		; read the second user input
+	push rax			; save it on stack
 
-	push OPERATOR_PROMPT
-	call print_message
-	sub rsp, 8
+	push OPERATOR_PROMPT		; print_message(OPERATOR_PROMPT)
+	call print_message		; 
+	sub rsp, 8			; reset stack pointer to free space
 
 	jmp _exit			; exit the program
 
